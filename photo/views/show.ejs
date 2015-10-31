@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Welcome to Photo Gallery</h1>
+    <div id="photo">
+      <% photo.forEach(function (data) {%>
+      <div class="photo">
+        <h2><a href="/photo/<%=data._id%>"><%=data.name %></a> </h2>
+        <img src="/<%=data.path%>"/>
+      </div>
+      <%})%>
+    </div>
+  </body>
+</html>
