@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <title></title>
+    <title>Express</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  </head>
+  <body>
+    <canvas id="myCanvas" height="1000px" width="1000px"></canvas>
+
+  </body>
+  <script>
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    var img=new Image();
+    img.src="/images/my.png";
+    img.onload = function (){
+      ctx.drawImage(img,10,10);
+    }
+  </script>
+</html>
