@@ -2,7 +2,7 @@ var express = require("express");
 var path = require("path");
 var bodyParser = require("body-parser");
 var multer = require("multer");
-var router = require("./routes/router")
+var route = require("./routes/router")
 var cookieParser = require('cookie-parser');
 var fs = require("fs");
 
@@ -15,7 +15,7 @@ app.use(multer({dest: '/tmp/'}).array('image'));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', "ejs");
 
-app.use(router);
+app.use(route);
 
 app.listen(3000);
 module.exports = app;
